@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', sans-serif;
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-aurora-secondary text-aurora-text-light overflow-x-hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-aurora-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-aurora-primary rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-aurora-accent;
+}
+
+/* Form Input Styles */
+.form-input {
+  @apply w-full bg-opacity-10 bg-white border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-aurora-accent focus:border-transparent transition-all duration-300 backdrop-blur-sm;
+}
+
+.form-label {
+  @apply block text-sm font-medium text-gray-300 mb-2;
+}
+
+.form-checkbox {
+  @apply w-5 h-5 rounded border-gray-300 text-aurora-accent focus:ring-aurora-accent bg-white/10 border-white/20;
+}
+
+.form-radio {
+  @apply w-5 h-5 border-gray-300 text-aurora-accent focus:ring-aurora-accent bg-white/10 border-white/20;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Background Canvas */
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: #000;
+  /* Fallback */
+}
+
+.darkveil-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}

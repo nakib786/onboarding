@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora N&N Business Solutions - Client Onboarding</title>
+  <meta name="description"
+    content="Client onboarding form for Aurora N&N Business Solutions Inc. Tell us about your project requirements.">
+</head>
+
+<body class="antialiased overflow-hidden">
+  <div id="canvas-container"></div>
+
+  <div class="relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="absolute top-8 left-0 w-full text-center z-10">
+      <h1
+        class="text-2xl font-bold tracking-tight text-white sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-aurora-accent to-aurora-primary">
+        Aurora N&N Business Solutions
+      </h1>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="absolute top-24 w-full max-w-xl px-4 z-10">
+      <div class="w-full bg-white/10 rounded-full h-1.5">
+        <div id="progress-bar" class="bg-aurora-accent h-1.5 rounded-full transition-all duration-500"
+          style="width: 0%"></div>
+      </div>
+      <div class="flex justify-between mt-2 text-xs text-gray-400">
+        <span id="progress-text">0% completed</span>
+        <span id="step-indicator">Step 1 of 1</span>
+      </div>
+    </div>
+
+    <!-- Main Form Container -->
+    <div class="w-full max-w-2xl relative z-20 mt-16">
+      <form id="onboarding-form" action="https://formsubmit.co/contact@aurorabusiness.ca" method="POST"
+        class="relative">
+        <!-- Hidden Fields -->
+
+        <input type="hidden" name="_subject" value="New Client Onboarding Submission">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+
+        <!-- Question Container -->
+        <div id="question-container"
+          class="min-h-[400px] flex flex-col justify-center transition-all duration-500 ease-in-out">
+          <!-- Dynamic Content Here -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="fixed bottom-8 left-0 w-full px-4 sm:px-0 z-30">
+          <div class="max-w-2xl mx-auto flex justify-between items-center">
+            <button type="button" id="prev-btn"
+              class="opacity-0 pointer-events-none px-6 py-3 rounded-lg text-sm font-bold text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-aurora-accent/50 transition-all duration-300 flex items-center">
+              <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+              </svg>
+              Previous
+            </button>
+
+            <button type="button" id="next-btn"
+              class="group px-8 py-3 rounded-lg bg-gradient-to-r from-aurora-primary to-aurora-blue text-sm font-bold text-white shadow-lg hover:shadow-aurora-accent/20 hover:scale-105 transition-all duration-300 flex items-center">
+              Next
+              <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </button>
+
+            <button type="submit" id="submit-btn"
+              class="hidden group px-8 py-3 rounded-lg bg-gradient-to-r from-green-600 to-green-500 text-sm font-bold text-white shadow-lg hover:shadow-green-500/20 hover:scale-105 transition-all duration-300 flex items-center">
+              Submit
+              <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+{
+    "form_title": "Website Project Requirements Form",
+    "sections": [
+        {
+            "title": "Basic Information",
+            "questions": [
+                {
+                    "id": "company_brand_name",
+                    "question": "Company / Brand Name",
+                    "type": "short_answer"
+                },
+                {
+                    "id": "full_name",
+                    "question": "Your Full Name",
+                    "type": "short_answer"
+                },
+                {
+                    "id": "email_address",
+                    "question": "Email Address",
+                    "type": "email"
+                },
+                {
+                    "id": "phone_number",
+                    "question": "Phone Number",
+                    "type": "short_answer"
+                },
+                {
+                    "id": "domain_purchased",
+                    "question": "Do you already have a domain purchased?",
+                    "type": "multiple_choice",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Not sure"
+                    ]
+                },
+                {
+                    "id": "existing_website",
+                    "question": "Existing Website (if any)",
+                    "type": "short_answer"
+                },
+                {
+                    "id": "industry_type",
+                    "question": "Industry / Business Type",
+                    "type": "short_answer"
+                }
+            ]
+        },
+        {
+            "title": "Project Overview",
+            "questions": [
+                {
+                    "id": "website_type",
+                    "question": "What type of website do you need?",
+                    "type": "checkboxes",
+                    "options": [
+                        "New Website",
+                        "Redesign of Existing Website",
+                        "Landing Page (One-Page Site)",
+                        "Business / Service Website",
+                        "E-commerce Store",
+                        "Portfolio",
+                        "Booking / Appointment System",
+                        "Membership / Login Portal",
+                        "Custom Web Application",
+                        "Other"
+                    ]
+                },
+                {
+                    "id": "business_description",
+                    "question": "Briefly describe your business and the purpose of the website:",
+                    "type": "paragraph"
+                },
+                {
+                    "id": "problem_solved",
+                    "question": "What problem is your website solving for your customers?",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "title": "Design Preferences",
+            "questions": [
+                {
+                    "id": "brand_assets",
+                    "question": "Do you have brand assets?",
+                    "type": "checkboxes",
+                    "options": [
+                        "Logo",
+                        "Brand Colors",
+                        "Dark Mode",
+                        "Other"
+                    ]
+                },
+                {
+                    "id": "websites_you_like",
+                    "question": "Websites you like (links + what you liked about them):",
+                    "type": "paragraph"
+                }
+            ]
+        },
+        {
+            "title": "Content & Pages",
+            "questions": [
+                {
+                    "id": "pages_needed",
+                    "question": "What pages do you need?",
+                    "type": "checkboxes",
+                    "options": [
+                        "Home",
+                        "About",
+                        "Services",
+                        "Products",
+                        "Gallery / Portfolio",
+                        "Blog / Articles",
+                        "Contact",
+                        "FAQ",
+                        "Testimonials",
+                        "Careers",
+                        "Custom Pages"
+                    ]
+                },
+                {
+                    "id": "content_provided",
+                    "question": "Will you provide all content (text & images)?",
+                    "type": "multiple_choice",
+                    "options": [
+                        "Yes, I will provide everything",
+                        "No, I need copywriting help",
+                        "No, I need image sourcing help",
+                        "Need help with both"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Functional Requirements",
+            "questions": [
+                {
+                    "id": "features_needed",
+                    "question": "Do you require any special features?",
+                    "type": "checkboxes",
+                    "options": [
+                        "Online Store (E-commerce)",
+                        "Online Payments (Stripe, PayPal, Interac)",
+                        "Booking/Appointment System",
+                        "Live Delivery Tracking",
+                        "Custom Forms",
+                        "Blog System",
+                        "User Login / Dashboard",
+                        "API Integrations",
+                        "Multi-Language Website",
+                        "Inventory Management",
+                        "Other"
+                    ]
+                },
+                {
+                    "id": "analytics",
+                    "question": "Do you need analytics or tracking installed?",
+                    "type": "checkboxes",
+                    "options": [
+                        "Google Analytics",
+                        "Meta Pixel",
+                        "TikTok Pixel",
+                        "Conversion Tracking",
+                        "Not required",
+                        "Not sure"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Technical Requirements",
+            "questions": [
+                {
+                    "id": "hosting_requirement",
+                    "question": "Hosting Requirements:",
+                    "type": "multiple_choice",
+                    "options": [
+                        "I already have hosting",
+                        "I need hosting setup",
+                        "Not sure / need recommendation"
+                    ]
+                },
+                {
+                    "id": "seo_priority",
+                    "question": "How important is website speed & SEO?",
+                    "type": "linear_scale",
+                    "min": 1,
+                    "max": 5,
+                    "labels": [
+                        "Not Important",
+                        "Very High Priority"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Timeline & Budget",
+            "questions": [
+                {
+                    "id": "start_date",
+                    "question": "Expected project start date:",
+                    "type": "date"
+                },
+                {
+                    "id": "launch_date",
+                    "question": "Deadline / Desired launch date:",
+                    "type": "date"
+                },
+                {
+                    "id": "budget",
+                    "question": "What is your estimated budget? (Enter a number or range)",
+                    "type": "short_answer"
+                }
+            ]
+        },
+        {
+            "title": "Maintenance & Support",
+            "questions": [
+                {
+                    "id": "maintenance_required",
+                    "question": "Do you require ongoing updates after launch?",
+                    "type": "multiple_choice",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Maybe, depends on cost"
+                    ]
+                },
+                {
+                    "id": "monthly_support",
+                    "question": "Monthly support needed for:",
+                    "type": "checkboxes",
+                    "options": [
+                        "Website updates",
+                        "SEO",
+                        "Security & backups",
+                        "Content changes",
+                        "Not required"
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Additional Notes",
+            "questions": [
+                {
+                    "id": "additional_notes",
+                    "question": "Anything else you would like me to know about your project?",
+                    "type": "paragraph"
+                }
+            ]
+        }
+    ]
+}

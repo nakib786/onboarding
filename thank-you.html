@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You - Aurora N&N Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        aurora: {
+                            primary: '#0f172a',
+                            secondary: '#1e293b',
+                            accent: '#38bdf8',
+                            blue: '#3b82f6',
+                        }
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.8s ease-out forwards',
+                        'slide-up': 'slideUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4 overflow-hidden relative">
+
+    <!-- Background Elements -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-aurora-blue/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-aurora-accent/20 rounded-full blur-[100px]">
+        </div>
+    </div>
+
+    <div
+        class="max-w-2xl w-full glass-panel rounded-2xl p-8 md:p-12 text-center relative z-10 animate-slide-up shadow-2xl">
+
+        <!-- Success Icon -->
+        <div class="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-8 animate-fade-in"
+            style="animation-delay: 0.2s">
+            <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+            </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 animate-fade-in"
+            style="animation-delay: 0.4s">
+            Submission Received
+        </h1>
+
+        <p class="text-lg text-gray-300 mb-8 leading-relaxed animate-fade-in" style="animation-delay: 0.6s">
+            Thank you for completing the onboarding process. We have successfully received your project details. Our
+            team at <span class="text-aurora-accent font-semibold">Aurora N&N Business Solutions</span> will review your
+            requirements and get back to you within 24 hours.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in" style="animation-delay: 0.8s">
+            <a href="/"
+                class="px-8 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-medium transition-all duration-300 border border-white/10 hover:border-white/30">
+                Return Home
+            </a>
+            <a href="mailto:contact@aurorabusiness.ca"
+                class="px-8 py-3 rounded-lg bg-gradient-to-r from-aurora-primary to-aurora-blue hover:shadow-lg hover:shadow-aurora-accent/20 text-white font-medium transition-all duration-300">
+                Contact Support
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
