@@ -56,11 +56,25 @@
   <div id="form-container"
     class="hidden relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
     <!-- Header -->
-    <div class="absolute top-8 left-0 w-full text-center z-10">
-      <h1
-        class="text-2xl font-bold tracking-tight text-white sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-aurora-accent to-aurora-primary">
-        Aurora N&N Business Solutions
-      </h1>
+    <div class="absolute top-8 left-0 w-full px-4 z-10">
+      <div class="max-w-2xl mx-auto flex items-center justify-between">
+        <h1
+          class="text-2xl font-bold tracking-tight text-white sm:text-3xl bg-clip-text text-transparent bg-gradient-to-r from-aurora-accent to-aurora-primary">
+          Aurora N&N Business Solutions
+        </h1>
+
+        <!-- Clear Progress Button -->
+        <button type="button" id="clear-progress-btn"
+          class="group px-4 py-2 rounded-lg text-xs sm:text-sm font-medium text-gray-400 border border-white/10 bg-white/5 hover:bg-red-500/10 hover:border-red-400/30 hover:text-red-400 transition-all duration-300 flex items-center gap-2"
+          title="Clear all saved answers">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16">
+            </path>
+          </svg>
+          <span class="hidden sm:inline">Clear Progress</span>
+        </button>
+      </div>
     </div>
 
     <!-- Progress Bar -->
