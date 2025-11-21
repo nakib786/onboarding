@@ -115,12 +115,10 @@ body {
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
 }
 
 .animate-scale-in {
   animation: scaleIn 0.5s ease-out forwards;
-  opacity: 0;
 }
 
 .animate-fade-in:nth-child(1) {

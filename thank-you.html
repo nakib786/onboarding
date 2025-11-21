@@ -3,121 +3,47 @@
 
 <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="/Logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thank You - Aurora N&N Business Solutions</title>
-    <meta name="description" content="Thank you for submitting your project details to Aurora N&N Business Solutions.">
+    <script type="module">
+        import '/src/style.css'
+    </script>
 </head>
 
-<body class="antialiased overflow-hidden">
-    <div id="canvas-container"></div>
+<body class="antialiased min-h-screen flex flex-col items-center justify-center p-4 bg-aurora-secondary">
+    <div
+        class="max-w-md w-full text-center space-y-8 bg-white/5 p-8 rounded-2xl border border-white/10 backdrop-blur-sm shadow-2xl">
 
-    <div class="relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-3xl w-full text-center space-y-8 relative z-10">
+        <!-- Logo -->
+        <div class="flex justify-center">
+            <img src="/Logo.svg" alt="Aurora N&N Business Solutions" class="w-32 h-32" />
+        </div>
 
-            <!-- Logo -->
-            <div class="flex justify-center mb-8 animate-fade-in">
-                <img src="/Logo.svg" alt="Aurora N&N Business Solutions" class="w-32 h-32 sm:w-40 sm:h-40" />
-            </div>
+        <!-- Success Icon -->
+        <div
+            class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-green-500/10 border border-green-500/20">
+            <svg class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
 
-            <!-- Success Icon -->
-            <div
-                class="w-24 h-24 bg-green-500/10 border-2 border-green-400/30 rounded-full flex items-center justify-center mx-auto mb-8 animate-scale-in">
-                <svg class="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"></path>
-                </svg>
-            </div>
+        <!-- Content -->
+        <div class="space-y-4">
+            <h1 class="text-3xl font-bold text-white">Thank You!</h1>
+            <p class="text-gray-300">
+                We have received your submission. Our team will review your details and get back to you shortly.
+            </p>
+        </div>
 
-            <!-- Main Heading -->
-            <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white animate-fade-in-up">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-aurora-accent to-aurora-primary">
-                    Thank You!
-                </span>
-            </h1>
-
-            <!-- Subheading -->
-            <h2 class="text-xl sm:text-2xl font-semibold text-gray-200 animate-fade-in-up"
-                style="animation-delay: 0.1s">
-                Your Submission Has Been Received
-            </h2>
-
-            <!-- Message -->
-            <div class="max-w-2xl mx-auto space-y-4 animate-fade-in-up" style="animation-delay: 0.2s">
-                <p class="text-lg text-gray-300 leading-relaxed">
-                    We appreciate you taking the time to share your project details with us. Our team at
-                    <span class="text-aurora-accent font-semibold">Aurora N&N Business Solutions</span>
-                    is excited to help bring your vision to life.
-                </p>
-
-                <div class="bg-white/5 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-                    <h3 class="text-aurora-accent font-semibold mb-3 text-lg">What Happens Next?</h3>
-                    <ul class="text-gray-300 space-y-2 text-left max-w-lg mx-auto">
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-aurora-accent mr-3 mt-0.5 flex-shrink-0" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span>Our team will review your requirements within <strong class="text-white">24
-                                    hours</strong></span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-aurora-accent mr-3 mt-0.5 flex-shrink-0" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span>We'll reach out to discuss your project in detail</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="w-5 h-5 text-aurora-accent mr-3 mt-0.5 flex-shrink-0" fill="none"
-                                stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                            </svg>
-                            <span>You'll receive a customized proposal and timeline</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="text-gray-400 text-sm animate-fade-in-up" style="animation-delay: 0.3s">
-                <p>Need immediate assistance? Email us at
-                    <a href="mailto:contact@aurorabusiness.ca"
-                        class="text-aurora-accent hover:text-aurora-blue transition-colors underline">
-                        contact@aurorabusiness.ca
-                    </a>
-                </p>
-            </div>
-
-            <!-- Action Buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4 animate-fade-in-up"
-                style="animation-delay: 0.4s">
-                <a href="/"
-                    class="group px-8 py-4 rounded-lg bg-gradient-to-r from-aurora-primary to-aurora-blue text-base font-bold text-white shadow-lg hover:shadow-aurora-accent/30 hover:scale-105 transition-all duration-300 flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-                    </svg>
-                    Return to Home
-                </a>
-                <a href="mailto:contact@aurorabusiness.ca"
-                    class="px-8 py-4 rounded-lg text-base font-bold text-white border border-white/20 bg-white/5 hover:bg-white/10 hover:border-aurora-accent/50 transition-all duration-300 flex items-center justify-center">
-                    <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                        </path>
-                    </svg>
-                    Contact Us
-                </a>
-            </div>
-
+        <!-- Button -->
+        <div>
+            <a href="/"
+                class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-aurora-primary hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-aurora-primary/30">
+                Back to Home
+            </a>
         </div>
     </div>
-
-    <script type="module" src="/src/thank-you.js"></script>
 </body>
 
 </html>

@@ -304,6 +304,8 @@ function renderQuestion(index) {
             option.className = 'text-black';
             select.appendChild(option);
           });
+          // Set default country code to US/Canada (+1) unless a saved value overrides it
+          select.value = '+1';
 
           const input = document.createElement('input');
           input.type = 'tel';
@@ -786,7 +788,7 @@ nextBtn.addEventListener('click', handleNext);
 prevBtn.addEventListener('click', handlePrev);
 
 // Initial Render
-renderQuestion(0);
+renderQuestion(currentQuestionIndex);
 
 // Add shake animation
 const style = document.createElement('style');
