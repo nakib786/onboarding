@@ -13,7 +13,48 @@
 <body class="antialiased overflow-hidden">
   <div id="canvas-container"></div>
 
-  <div class="relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
+  <!-- Welcome Landing Page -->
+  <div id="welcome-page"
+    class="relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-8 max-w-2xl mx-auto">
+      <!-- Logo -->
+      <div class="flex justify-center mb-8">
+        <img src="/Logo.svg" alt="Aurora N&N Business Solutions" class="w-48 h-48 sm:w-64 sm:h-64 animate-fade-in" />
+      </div>
+
+      <!-- Company Name -->
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white animate-fade-in">
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-aurora-accent to-aurora-primary">
+          Aurora N&N Business Solutions
+        </span>
+      </h1>
+
+      <!-- Welcome Message -->
+      <div class="space-y-4 animate-fade-in">
+        <p class="text-xl sm:text-2xl text-gray-200 font-medium">
+          Welcome to Our Client Onboarding
+        </p>
+        <p class="text-base sm:text-lg text-gray-400 max-w-xl mx-auto">
+          We're excited to learn about your project! This quick questionnaire will help us understand your needs and
+          deliver the best solutions for your business.
+        </p>
+      </div>
+
+      <!-- Let's Begin Button -->
+      <button id="begin-btn"
+        class="group mt-8 px-10 py-4 rounded-lg bg-gradient-to-r from-aurora-primary to-aurora-blue text-lg font-bold text-white shadow-lg hover:shadow-aurora-accent/30 hover:scale-105 transition-all duration-300 flex items-center mx-auto animate-fade-in">
+        Let's Begin
+        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Form Container (Initially Hidden) -->
+  <div id="form-container"
+    class="hidden relative min-h-screen flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8">
     <!-- Header -->
     <div class="absolute top-8 left-0 w-full text-center z-10">
       <h1
@@ -46,7 +87,7 @@
 
         <!-- Question Container -->
         <div id="question-container"
-          class="min-h-[400px] flex flex-col justify-center transition-all duration-500 ease-in-out">
+          class="min-h-[200px] max-h-[calc(100vh-280px)] overflow-y-auto flex flex-col justify-start transition-all duration-500 ease-in-out pb-4 custom-scrollbar">
           <!-- Dynamic Content Here -->
         </div>
 

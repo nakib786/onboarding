@@ -8,6 +8,29 @@ initDarkVeil(canvasContainer, {
   speed: 0.5
 });
 
+// --- Welcome Page Logic ---
+const welcomePage = document.getElementById('welcome-page');
+const formContainer = document.getElementById('form-container');
+const beginBtn = document.getElementById('begin-btn');
+
+beginBtn.addEventListener('click', () => {
+  // Fade out welcome page
+  welcomePage.style.opacity = '0';
+  welcomePage.style.transition = 'opacity 0.5s ease-out';
+
+  setTimeout(() => {
+    welcomePage.classList.add('hidden');
+    formContainer.classList.remove('hidden');
+
+    // Fade in form
+    formContainer.style.opacity = '0';
+    requestAnimationFrame(() => {
+      formContainer.style.transition = 'opacity 0.5s ease-in';
+      formContainer.style.opacity = '1';
+    });
+  }, 500);
+});
+
 // --- Form Logic ---
 
 const questionContainer = document.getElementById('question-container');
@@ -220,7 +243,7 @@ function renderQuestion(index) {
 
       case 'checkboxes':
         inputEl = document.createElement('div');
-        inputEl.className = 'grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4';
+        inputEl.className = 'space-y-3 mt-4';
         q.options.forEach(opt => {
           const optWrapper = document.createElement('label');
           optWrapper.className = 'flex items-center p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-aurora-accent/50 transition-all cursor-pointer group';
@@ -537,22 +560,19 @@ form.addEventListener('submit', (e) => {
   allQuestions.forEach(q => {
     const value = formData[q.id];
 
+    const input = document.createElement('input');
+    input.type = 'hidden';
+    input.name = q.id;
+
     if (Array.isArray(value)) {
-      value.forEach(v => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = q.id;
-        input.value = v;
-        form.appendChild(input);
-      });
+      // For checkboxes, send as comma-separated string
+      input.value = value.length > 0 ? value.join(', ') : '-';
     } else {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = q.id;
       // Send '-' for unanswered optional questions to maintain order in email
       input.value = (value !== undefined && value !== null && value !== '') ? value : '-';
-      form.appendChild(input);
     }
+
+    form.appendChild(input);
   });
 
   // Submit via Fetch
